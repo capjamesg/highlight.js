@@ -1,0 +1,43 @@
+#annotation-count {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #D593FF;
+    color: white;
+    z-index: 9999;
+    border-radius: 0 0 0 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+.annotation_h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+#copy-url-button {
+    padding: 10px;
+    background-color: white;
+    color: #D593FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+#annotation-list {
+    padding: 0;
+}
+#annotation-list li {
+    border-bottom: 1px solid white;
+}
