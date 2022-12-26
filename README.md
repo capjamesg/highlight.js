@@ -38,7 +38,13 @@ This URL highlights four TV shows on my TV show watch list:
 - Coronation Street
 - Silicon Valley
 
+The image below shows the highlights in the above URL displayed on a page:
+
 ![A screenshot of four highlighted bullet points in a list of TV shows](screenshot.png)
+
+## Related Works
+
+To highlight an entire paragraph on a page, check out [fragmention.js](https://github.com/capjamesg/fragmention.js).
 
 ## Contributing
 
