@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "annotate.js",
+  "version": "1.0.1",
+
+  "description": "Highlights web pages with your own notes.",
+
+  "icons": {
+    "48": "icons/paperclip.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["annotate/annotate.js", "annotate/purify.min.js"],
+      "css": ["annotate/annotate.css"]
+    }
+  ]
+
+}
+
