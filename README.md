@@ -1,21 +1,21 @@
-# annotate.js
+# highlight.js
 
-annotate.js provides inline text annotation highlights for web pages.
+highlight.js provides inline text annotation highlights for web pages.
 
-With annotate.js, you can interactively highlight text on a web page and get a shareable link with your saved highlights.
+With highlight.js, you can interactively highlight text on a web page and get a shareable link with your saved highlights.
 
 ## Getting Started
 
-To start using annotate.js, first copy the script and style sheet onto your website:
+To start using highlight.js, first copy the script and style sheet onto your website:
 
-    git clone https://github.com/capjamesg/annotate.js
-    cp annotate.js/annotate.js YOUR_SITE_ASSETS_FOLDER
-    cp annotate.js/annotate.css YOUR_SITE_ASSETS_FOLDER
+    git clone https://github.com/capjamesg/highlight.js
+    cp highlight.js/highlight.js YOUR_SITE_ASSETS_FOLDER
+    cp highlight.js/annotate.css YOUR_SITE_ASSETS_FOLDER
 
-Next, embed the annotate.js CSS and JavaScript files on your website:
+Next, embed the highlight.js CSS and JavaScript files on your website:
 
     <link rel="stylesheet" href="YOUR_SITE_ASSETS_FOLDER/annotate.css">
-    <script src="YOUR_SITE_ASSETS_FOLDER/annotate.js"></script>
+    <script src="YOUR_SITE_ASSETS_FOLDER/highlight.js"></script>
 
 Now you are ready to use the script!
 
