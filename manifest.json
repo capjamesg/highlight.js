@@ -1,10 +1,10 @@
 {
 
   "manifest_version": 2,
-  "name": "annotate.js",
-  "version": "1.0.1",
+  "name": "highlight.js",
+  "version": "1.0.2",
 
-  "description": "Highlights web pages with your own notes.",
+  "description": "Highlight web pages with your own notes.",
 
   "icons": {
     "48": "icons/paperclip.png"
@@ -13,10 +13,12 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["annotate/annotate.js", "annotate/purify.min.js"],
-      "css": ["annotate/annotate.css"]
+      "js": ["highlight/purify.min.js", "highlight/highlight.js"],
+      "css": ["highlight/highlight.css"]
     }
+  ],
+  "web_accessible_resources": [
+      "highlight/purify.min.js"
   ]
-
 }
 
