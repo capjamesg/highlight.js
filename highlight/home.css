@@ -1,0 +1,32 @@
+html {
+    background-color: #1E28BB63;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #1E28BB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#highlight-list li {
+    padding-bottom: 10px;
+}

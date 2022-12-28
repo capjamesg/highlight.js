@@ -71,6 +71,33 @@ function get_selected_text () {
 
     all_components.push(selected_text);
 
+    var page_url = window.location.href;
+
+    console.log(all_components)
+
+    var all_new_list = [];
+
+    for (var i = 0; i < all_components.length; i++) {
+        // create record format page_url: page_url, component: selected_text
+        var record = {
+            "page_url": page_url,
+            "component": all_components[i]
+        };
+
+        all_new_list.push(record);
+    }
+
+    console.log(all_new_list);
+
+    browser.storage.local.get('all_components', function (data) {
+        console.log(data.all_components);
+        if (data.all_components) {
+            all_components = data.all_components;
+        }
+    });
+
+    browser.storage.local.set({ 'all_components': all_new_list });
+
     // update annotation count
     var annotation_count = document.getElementById('annotation-count-number');
     
@@ -125,8 +152,6 @@ document.addEventListener('keydown', function (e) {
 function change_url () {
     // remove duplicates
     all_components = [...new Set(all_components)];
-
-    console.log(all_components)
 
     // compose url
     var url = window.location.href + '#w=t,#text=' + all_components.join(',#text=');
@@ -197,17 +222,14 @@ function annotate () {
                     var new_span = document.createElement('span');
                     new_span.style.backgroundColor = '#D593FF';
                     // add double click event
-                    console.log(fragment)
                     new_span.textContent = fragment;
-                    // get index of  fragments length
+                    // get index of fragments length
                     new_span.id = fragments.indexOf(original_fragments);
 
                     // sanitize input with DOMPurify.sanitize(externalHTML);
-                    console.log(DOMPurify.sanitize(new_span.outerHTML))
                     p.innerHTML = p.innerHTML.replace(fragment, DOMPurify.sanitize(new_span.outerHTML));
 
                     var new_span = document.getElementById(fragments.indexOf(original_fragments));
-                    console.log("d")
 
                     new_span.addEventListener('click', remove_annotation);
                 }

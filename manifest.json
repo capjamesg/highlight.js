@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "highlight.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "description": "Highlight web pages with your own notes.",
 
@@ -13,12 +13,19 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["highlight/purify.min.js", "highlight/highlight.js"],
+      "js": ["highlight/purify.min.js", "highlight/highlight.js", "highlight/home.js"],
       "css": ["highlight/highlight.css"]
     }
   ],
   "web_accessible_resources": [
       "highlight/purify.min.js"
+  ],
+  "browser_action": {
+    "default_icon": "icons/paperclip.png",
+    "default_popup": "highlight/home.html"
+  },
+  "permissions": [
+    "storage"
   ]
 }
 
