@@ -21,7 +21,7 @@ Now you are ready to use the script!
 
 ## Usage Guide
 
-To annotate, press `Command + K` at the same time. Then, highlight any text on the page that you want to appear in your shared link. You can do this by dragging your mouse over any text on the page. A box will appear in the top right corner that tracks how many highlights you have created in your session.
+To annotate, press `Control + K` at the same time. Then, highlight any text on the page that you want to appear in your shared link. You can do this by dragging your mouse over any text on the page. A box will appear in the top right corner that tracks how many highlights you have created in your session.
 
 When you are done, press `Copy URL` to copy the URL with your highlights to your clipboard. You can then paste this URL anywhere to share your highlights.
 
