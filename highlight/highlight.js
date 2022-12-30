@@ -65,6 +65,22 @@ function get_selected_text () {
     // get all selected text and compose it into a url
     var selected_text = window.getSelection().toString();
 
+    // disallow text strings > 150
+    if (selected_text.length > 150) {
+        return;
+    }
+
+    // if combined length of all_components > 1500, return
+    var combined_length = 0;
+
+    for (var i = 0; i < all_components.length; i++) {
+        combined_length += all_components[i].length;
+    }
+
+    if (combined_length > 1500) {
+        return;
+    }
+
     if (selected_text === '' || !selected_text) {
         return;
     }
@@ -86,8 +102,6 @@ function get_selected_text () {
 
         all_new_list.push(record);
     }
-
-    console.log(all_new_list);
 
     browser.storage.local.get('all_components', function (data) {
         console.log(data.all_components);
